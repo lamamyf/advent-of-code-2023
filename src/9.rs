@@ -31,13 +31,13 @@ fn main() {
                 .collect())
             .collect();
 
-        result = x(&result, soil_vector);
+        result = find_values(&result, soil_vector);
     });
 
     dbg!(&result.iter().min());
 }
 
-fn x(keys: &Vec<i64>, map: Vec<Vec<i64>>) -> Vec<i64> {
+fn find_values(keys: &Vec<i64>, map: Vec<Vec<i64>>) -> Vec<i64> {
     let mut result: Vec<i64>  = Vec::new();
 
     keys.iter().for_each(|key| {
